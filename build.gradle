@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.2'
+    implementation 'com.bazaarvoice.ostrich.examples.calculator:calculator:2.1.0'
+    implementation 'org.slieb:dependency-calculator:0.4'
+    implementation 'it.ethiclab.depcal:dependency-calculator:0.0.1'
+    implementation 'org.jdice.calc:jcalc:0.1b'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+//    testCompile 'com.github.stefanbirkner:system-rules:1.19.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
+
+}
+
+test {
+    useJUnitPlatform()
+
+}
